@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Ann Mary Thomas | Data Analyst Portfolio</title>
   <style>
+    
     body {
       font-family: 'Georgia', serif;
       line-height: 1.6;
@@ -80,6 +81,26 @@
       font-size: 0.9rem;
       margin-top: 40px;
     }
+    .about-section {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.about-photo {
+  flex: 0 0 200px;
+  max-width: 200px;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.about-text {
+  flex: 1;
+  min-width: 260px;
+}
   </style>
 </head>
 <body>
@@ -89,27 +110,21 @@
   <p><em>Data Analyst • Python • Power BI • SQL • Machine Learning</em></p>
 </header>
 
-<div class="container">
+<section class="container">
+  <h2>About Me</h2>
+  <div class="about-section">
+    <img src="Profile.jpeg" alt="Ann Mary Thomas" class="about-photo" />
+    <div class="about-text">
+      <p>Hello! I'm <strong>Ann Mary Thomas</strong>, a data analyst driven by curiosity, clarity, and impact. With a background in Mechanical Automobile Engineering and a Master's in Data Analytics, I bring a unique blend of analytical rigor and real-world problem-solving to every project I tackle.</p>
 
-  <section style="display: flex; align-items: center; gap: 30px;">
-  <img src="Profile.jpeg" alt="Ann Mary Thomas" style="width: 200px; border-radius: 10px;">
-  <div>
-    <h2>About Me</h2>
-<p>
-  Hello! I'm <strong>Ann Mary Thomas</strong>, a data analyst driven by curiosity, clarity, and impact. With a background in Mechanical Automobile Engineering and a Master's in Data Analytics, I bring a unique blend of analytical rigor and real-world problem-solving to every project I tackle.
-</p>
-<p>
-  My passion lies in decoding data to uncover insights that drive smart decisions. Whether it's building interactive dashboards in Power BI, crafting predictive models using Python, or forecasting trends through time-series analysis, I thrive on translating complex information into stories that inspire action.
-</p>
-<p>
-  I’ve worked across academic research, clean tech, and fashion startups—where I’ve analyzed consumer behavior, optimized CO₂ emissions reporting, and developed machine learning models for energy forecasting. Each role has deepened my appreciation for data's power to transform industries and serve communities.
-</p>
-<p>
-  Currently, I’m expanding my deep learning research on electricity demand and carbon emissions at London Metropolitan University. My thesis, selected for academic publication, has opened up opportunities to work on cutting-edge sustainability analytics under expert guidance.
-</p>
-<p>
-  When I’m not immersed in data, you’ll find me exploring creative visualizations, mentoring peers, or brainstorming how to make insights more accessible to non-technical audiences. I believe the best data stories don’t just inform—they connect.
-</p>
+      <p>My passion lies in decoding data to uncover insights that drive smart decisions. Whether it's building interactive dashboards in Power BI, crafting predictive models using Python, or forecasting trends through time-series analysis, I thrive on translating complex information into stories that inspire action.</p>
+
+      <p>I’ve worked across academic research, clean tech, and fashion startups—where I’ve analyzed consumer behavior, optimized CO₂ emissions reporting, and developed machine learning models for energy forecasting. Each role has deepened my appreciation for data's power to transform industries and serve communities.</p>
+
+      <p>Currently, I’m expanding my deep learning research on electricity demand and carbon emissions at London Metropolitan University. My thesis, selected for academic publication, has opened up opportunities to work on cutting-edge sustainability analytics under expert guidance.</p>
+
+      <p>When I’m not immersed in data, you’ll find me exploring creative visualizations, mentoring peers, or brainstorming how to make insights more accessible to non-technical audiences. I believe the best data stories don’t just inform—they connect.</p>
+    </div>
   </div>
 </section>
 

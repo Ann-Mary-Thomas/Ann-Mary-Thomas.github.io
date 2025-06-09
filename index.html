@@ -1,184 +1,209 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Ann Mary Thomas | Data Analyst Portfolio</title>
   <style>
-  body {
-    font-family: 'Times New Roman', serif;
-    background: #dfe8d5; /* soft sage green */
-    margin: 0;
-    padding: 0;
-    color: #2c2c2c;
-  }
-
-  header {
-    background: #4b6043; /* deep olive green */
-    color: white;
-    padding: 40px 20px;
-    text-align: center;
-  }
-
-  header h1 {
-    margin: 0;
-    font-size: 2.5rem;
-  }
-
-  header p {
-    font-size: 1.2rem;
-    margin-top: 5px;
-  }
-
-  .container {
-    max-width: 1000px;
-    margin: auto;
-    padding: 30px 20px;
-  }
-
-  .about-photo {
-    float: left;
-    width: 220px;
-    margin-right: 30px;
-    border-radius: 10px;
-  }
-
-  h2 {
-    color: #4b6043;
-    border-bottom: 2px solid #b2bfae;
-    padding-bottom: 6px;
-  }
-
-  ul {
-    padding-left: 20px;
-  }
-
-  a {
-    color: #4d702c;
-    text-decoration: none;
-  }
-
-  a:hover {
-    text-decoration: underline;
-  }
-
-  .section {
-    margin-bottom: 40px;
-    clear: both;
-  }
-
-  footer {
-    background: #4b6043;
-    color: white;
-    text-align: center;
-    padding: 15px;
-    margin-top: 40px;
-  }
-</style>
+    body {
+      font-family: 'Georgia', serif;
+      line-height: 1.6;
+      background: #edf3ec;
+      color: #333;
+      margin: 0;
+    }
+    header {
+      background: #3e523a;
+      color: #f5f5f5;
+      padding: 50px 20px;
+      text-align: center;
+      border-bottom: 4px solid #b2bfac;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 3rem;
+    }
+    header p {
+      margin-top: 10px;
+      font-size: 1.2rem;
+      opacity: 0.9;
+    }
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+      background: #fff;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+      border-radius: 8px;
+    }
+    h2 {
+      color: #3e523a;
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+      padding-bottom: 6px;
+      border-bottom: 2px solid #b2bfac;
+    }
+    h3 {
+      color: #4e6049;
+      margin-top: 20px;
+    }
+    ul {
+      list-style-type: disc;
+      list-style-position: inside;
+      margin-left: 0;
+      padding-left: 0;
+    }
+    ul li {
+      margin-bottom: 8px;
+    }
+    a {
+      color: #4e6049;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+      color: #2c3a25;
+    }
+    .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .skills-list li {
+      flex: 1 1 45%;
+      margin-bottom: 6px;
+    }
+    footer {
+      background: #3e523a;
+      color: #f5f5f5;
+      text-align: center;
+      padding: 15px;
+      font-size: 0.9rem;
+      margin-top: 40px;
+    }
+  </style>
 </head>
 <body>
 
 <header>
   <h1>Ann Mary Thomas</h1>
-  <p>Data Analyst | Python • Power BI • SQL • Machine Learning</p>
+  <p><em>Data Analyst • Python • Power BI • SQL • Machine Learning</em></p>
 </header>
 
 <div class="container">
 
-  <div class="section">
-<img src="Profile.jpeg" alt="Ann Mary Thomas" class="about-photo">
+  <section>
     <h2>About Me</h2>
+    <p>I’m a passionate Data Analyst with expertise in Python, Power BI, SQL, and machine learning. I thrive on turning complex data into clear, actionable insights. My current focus is on a deep-learning research project forecasting electricity demand and CO₂ emissions—work that’s being prepared for publication.</p>
+  </section>
+
+  <section>
+    <h2>Skills</h2>
+    <h3>Technical</h3>
+    <ul class="skills-list">
+      <li><strong>Python:</strong> Pandas, NumPy, Matplotlib, scikit‑learn</li>
+      <li><strong>SQL</strong></li>
+      <li><strong>Excel</strong> (Advanced)</li>
+      <li><strong>Power BI</strong></li>
+      <li><strong>Git</strong>, <strong>Jupyter Notebook</strong></li>
+      <li><strong>Techniques:</strong> Cleaning & Validation, Visualization, Predictive Modeling, Regression, Time‑Series Forecasting</li>
+    </ul>
+    <h3>Soft</h3>
+    <ul>
+      <li>Analytical Thinking</li>
+      <li>Communication & Data Storytelling</li>
+      <li>Problem Solving</li>
+      <li>Stakeholder Engagement</li>
+      <li>Team Collaboration</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Experience</h2>
+    <h3>Researcher – London Metropolitan University<br><small>Feb 2025 – present</small></h3>
+    <ul>
+      <li>Conducting deep‑learning research for MSc thesis: forecasting electricity demand & CO₂ emissions</li>
+      <li>Built and tuned LSTM, RNN, and RBM‑NN models using Python on U.S. energy time‑series data</li>
+      <li>Engineered features, evaluated model performance, and prepared results for academic dissemination</li>
+      <li>Collaborating with faculty on documentation, review, and editorial processes</li>
+    </ul>
+
+    <h3>Data Analyst Intern – Archaiesth (fashion startup)<br><small>May 2024 – Sep 2024</small></h3>
+    <ul>
+      <li>Analyzed purchasing patterns and demographics for a clothing brand</li>
+      <li>Pinpointed age groups and product lines driving the most engagement and sales</li>
+      <li>Delivered data‑driven recommendations that refined marketing targeting and boosted conversions</li>
+    </ul>
+
+    <h3>Junior Data Analyst – Navalt Solar and Electric Boats<br><small>Aug 2022 – Jan 2024</small></h3>
+    <ul>
+      <li>Built predictive models to estimate CO₂ emissions using sea state and engine variables</li>
+      <li>Created interactive Power BI dashboards showcasing emissions, fleet KPIs, and trends</li>
+      <li>Automated the cleaning pipeline, increasing reporting accuracy by 70%</li>
+      <li>Collaborated with engineering and sustainability teams to streamline workflows</li>
+    </ul>
+  </section>
+
+  <section>
+  <h2>Projects</h2>
+  
+  <div class="project">
+    <h3><a href="https://github.com/ann-1999-byte/vehicle-emissions-dashboard" target="_blank">Vehicle Emissions Dashboard</a></h3>
     <p>
-      I am a detail-oriented and passionate data analyst with hands-on experience in Python, Power BI, SQL, and machine learning.
-      I specialize in building dashboards, predictive models, and turning data into actionable insights. Currently contributing to a deep learning research project focused on electricity demand and carbon emission forecasting.
+      Developed a Power BI dashboard analyzing CO₂ emissions across vehicle types.  
+      Integrated engine capacity, vehicle mass, and fuel-type data from the EU environmental dataset.  
+      Used scatter and bar charts to highlight top emitters, and implemented interactive filters so users can compare different manufacturers, countries, and fuel types.  
+      Helped demonstrate that engine size drove ~70% of emission variance—providing clear visual insights to guide eco-strategy decisions.
     </p>
   </div>
   
-<div class="section">
-  <h2>Skills</h2>
+  <div class="project">
+    <h3><a href="https://github.com/ann-1999-byte/marketing-campaign-analysis" target="_blank">Marketing Campaign Analysis</a></h3>
+    <p>
+      Built a logistic regression model in Python to predict customer affinity towards promotional offers.  
+      Cleaned and preprocessed demographic and purchase history data from ~1,500 customers.  
+      Identified key features—such as age group, previous purchase volume, and product ownership—that increased campaign response by 20%.  
+      Created performance reports (accuracy, confusion matrix, ROC curve) and shared actionable recommendations that improved campaign targeting.
+    </p>
+  </div>
 
-  <h3>Technical Skills</h3>
-  <ul>
-    <li><strong>Data Tools:</strong> Python (Pandas, NumPy, Matplotlib, Scikit-learn), SQL, Excel (Advanced), Power BI, Git, Jupyter Notebook</li>
-    <li><strong>Techniques:</strong> Data Cleaning & Validation, Data Visualization, Predictive Modeling, Regression Analysis, Time-Series Forecasting</li>
-  </ul>
+  <div class="project">
+    <h3><a href="https://github.com/ann-1999-byte/graduate-outcomes-analysis" target="_blank">Graduate Outcomes in Education</a></h3>
+    <p>
+      Conducted an analysis of UK higher education outcomes using HESA data.  
+      Used Random Forest and K-means clustering to explore how variables such as subject, provider type, and study mode influence employment or further study.  
+      Achieved ~45% classification accuracy across six outcome categories, with notable trends showing higher employment rates in STEM fields.  
+      Cluster analysis unveiled four distinct graduate profiles, used to recommend targeted university support programs.
+    </p>
+  </div>
 
-  <h3>Soft Skills</h3>
-  <ul>
-    <li>Analytical Thinking</li>
-    <li>Communication & Data Storytelling</li>
-    <li>Problem Solving</li>
-    <li>Stakeholder Engagement</li>
-    <li>Team Collaboration</li>
-  </ul>
-</div>
-  
-<div class="section">
-  <h2>Experience</h2>
+  <div class="project">
+    <h3><a href="https://github.com/Ann-Mary-Thomas/energy-forecasting-usa" target="_blank">Energy Forecasting (Deep Learning)</a></h3>
+    <p>
+      Researched and implemented LSTM, RNN, and RBM+NN deep-learning models to forecast electricity demand and CO₂ emissions in the U.S. power sector.  
+      Collected hourly demand and emission data for California and Texas; engineered time-based, weather, and lag features.  
+      Conducted model comparison on MAE and RMSE metrics, achieving best results with an optimized LSTM (~5% better than RNN).  
+      Results are being prepared for academic publication—highlighting peak-demand forecasting improvements and decarbonization implications.
+    </p>
+  </div>
+</section>
 
-  <h3>Researcher – London Metropolitan University (Feb 2025 – present)</h3>
-<p><em>MSc Data Analytics – Thesis Project</em></p>
-<ul>
-  <li>Conducted deep learning research as part of my master's thesis, focusing on forecasting electricity demand and CO₂ emissions in the U.S. power sector.</li>
-  <li>Developed and compared predictive models including LSTM, RNN, and RBM+NN using time-series energy datasets.</li>
-  <li>Performed feature engineering, model tuning, and evaluation in Python to optimize forecasting accuracy.</li>
-  <li>Collaborated with faculty on academic documentation and research presentation.</li>
-</ul>
-    
-  <h3>Data Analyst Intern – Archaiesth (May 2024 – Sep 2024)</h3>
-  <ul>
-    <li>Analyzed customer purchase behavior and demographics at a fashion startup.</li>
-    <li>Identified high-converting age groups and product preferences.</li>
-    <li>Delivered insights that refined marketing strategies and boosted conversion rates.</li>
-  </ul>
-    
-
-  <h3>Junior Data Analyst – Navalt Solar and Electric Boats (Aug 2022 – Jan 2024)</h3>
-  <ul>
-    <li>Developed predictive models to estimate ship-based CO₂ emissions based on sea conditions and engine data.</li>
-    <li>Created Power BI dashboards to visualize emissions, fleet metrics, and operational KPIs.</li>
-    <li>Automated data-cleaning processes, improving reporting accuracy by 70%.</li>
-    <li>Worked cross-functionally with engineering and sustainability teams to improve data pipelines.</li>
-  </ul>
-</div>
-  
-<div class="section">
-    <h2>Projects</h2>
-   <ul>
-  <li><a href="https://github.com/ann-1999-byte/vehicle-emissions-dashboard" target="_blank">Vehicle Emissions Dashboard</a> – Power BI analysis of vehicle CO₂ emissions based on engine, mass, and fuel type.</li>
-
-  <li><a href="https://github.com/ann-1999-byte/marketing-campaign-analysis" target="_blank">Marketing Campaign Analysis</a> – Logistic regression model in Python to predict customer affinity.</li>
-
-  <li><a href="https://github.com/ann-1999-byte/graduate-outcomes-analysis" target="_blank">Graduate Outcomes in Education</a> – ML-based analysis of UK education data using Random Forest and clustering.</li>
-
-  <li><a href="https://github.com/Ann-Mary-Thomas/energy-forecasting-usa" target="_blank">Energy Forecasting (Deep Learning)</a> – Applied LSTM, RNN, and RBM+NN models to forecast electricity demand and CO₂ emissions using U.S. energy datasets.</li>
-  </ul>
-</div>
-
-<div class="section">
+  <section>
     <h2>Education</h2>
     <ul>
       <li><strong>MSc in Data Analytics</strong>, London Metropolitan University (2024 – 2025)</li>
-      <li><strong>B-Tech in Mechanical Automobile Engineering</strong>, SCT College of Engineering (2017 – 2021)</li>
+      <li><strong>B‑Tech in Mechanical Automobile Engineering</strong>, SCT College of Engineering (2017 – 2021)</li>
     </ul>
-</div>
+  </section>
 
-<div class="section">
-    <h2>Resume</h2>
-    <p><a href="resume.pdf" target="_blank">Download my resume (PDF)</a></p>
-</div>
-
-<div class="section">
+  <section>
     <h2>Contact</h2>
-    <p>Email: <a href="mailto:annmarytttt@gmail.com">annmarytttt@gmail.com</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/ann-mary-thomas-6272aa200" target="_blank">Ann Mary Thomas</a></p>
-</div>
+    <p>Email: <a href="mailto:annmarytttt@gmail.com">annmarytttt@gmail.com</a><br>
+       LinkedIn: <a href="https://www.linkedin.com/in/ann-mary-thomas-6272aa200" target="_blank">Ann Mary Thomas</a></p>
+  </section>
 
 </div>
 
-<footer>
-  &copy; 2025 Ann Mary Thomas. All rights reserved.
-</footer>
+<footer>&copy; 2025 Ann Mary Thomas — All rights reserved.</footer>
 
 </body>
 </html>

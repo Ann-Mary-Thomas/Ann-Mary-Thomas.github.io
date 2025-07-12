@@ -1,4 +1,4 @@
-.<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8"/>
@@ -26,7 +26,7 @@ header::before {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.7);
   z-index: 1;
 }
 header h1, header p {
@@ -49,6 +49,13 @@ header p {
   background: #fff;
   box-shadow: 0 0 10px rgba(0,0,0,0.05);
   border-radius: 8px;
+}
+.about-photo {
+  flex: 0 0 120px;
+  max-width: 120px;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 h2 {
   color: #274e70;
@@ -110,8 +117,7 @@ footer {
   <p><em>Energy & Sustainability • AI & Forecasting • Data Visualization</em></p>
 </header>
 
-<section class="container">
-  
+<div class="container">
   <section>
   <h2>About Me</h2>
   <div class="about-section">

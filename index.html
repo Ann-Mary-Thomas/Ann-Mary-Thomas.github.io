@@ -5,321 +5,609 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Ann Mary Thomas | Data Analyst Portfolio</title>
 <style>
-body {
-  font-family: 'Georgia', serif;
-  line-height: 1.6;
-  background: #f5f7f6;
-  color: #222;
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.7;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #2d3748;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: #ffffff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
 header {
-  background: url('da4.webp') center/cover no-repeat;
+  background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
   color: #fff;
-  padding: 50px 20px;
+  padding: 60px 40px;
   text-align: center;
   position: relative;
+  overflow: hidden;
 }
+
 header::before {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.7);
-  z-index: 1;
+  top: -50%;
+  right: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+  animation: pulse 15s ease-in-out infinite;
 }
-header h1, header p {
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+header h1 {
+  font-size: 3.5rem;
+  margin-bottom: 15px;
+  font-weight: 700;
+  position: relative;
+  z-index: 2;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+header .tagline {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  opacity: 0.95;
   position: relative;
   z-index: 2;
 }
-header h1 {
-  margin: 0;
-  font-size: 3rem;
+
+header .specialties {
+  font-size: 1.1rem;
+  opacity: 0.85;
+  position: relative;
+  z-index: 2;
+  font-weight: 300;
 }
-header p {
-  margin-top: 10px;
-  font-size: 1.2rem;
-  opacity: 0.95;
-}
+
 .container {
-  max-width: 900px;
-  margin: 40px auto;
-  padding: 20px;
-  background: #fff;
-  box-shadow: 0 0 10px rgba(0,0,0,0.05);
-  border-radius: 8px;
+  padding: 50px 40px;
 }
-.about-photo {
-  flex: 0 0 160px;
-  max-width: 160px;
-  border-radius: 10px;
-  object-fit: cover;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+
+section {
+  margin-bottom: 60px;
 }
+
+section:last-child {
+  margin-bottom: 0;
+}
+
 h2 {
-  color: #274e70;
-  font-size: 1.8rem;
-  margin-bottom: 10px;
-  padding-bottom: 6px;
-  border-bottom: 2px solid #bed1e6;
+  color: #1e3a8a;
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+  border-bottom: 3px solid #3b82f6;
+  display: inline-block;
+  font-weight: 600;
 }
-h3 {
-  color: #3a5f85;
-  margin-top: 20px;
+
+.about-section {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+  margin-bottom: 20px;
 }
-ul {
-  list-style-type: disc;
-  list-style-position: inside;
-  margin-left: 0;
+
+.about-photo {
+  flex: 0 0 180px;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  border: 5px solid #f0f4ff;
+}
+
+.about-text p {
+  margin-bottom: 15px;
+  font-size: 1.05rem;
+  color: #4a5568;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.skill-box {
+  background: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 100%);
+  border: none;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.skill-box h4 {
+  color: #1e3a8a;
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #3b82f6;
+}
+
+.skill-box ul {
+  list-style: none;
   padding-left: 0;
 }
-ul li {
-  margin-bottom: 8px;
+
+.skill-box ul li {
+  padding: 8px 0;
+  color: #4a5568;
+  font-size: 0.95rem;
+  padding-left: 20px;
+  position: relative;
 }
-a {
-  color: #3a5f85;
-  text-decoration: none;
+
+.skill-box ul li::before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  color: #3b82f6;
+  font-weight: bold;
 }
-a:hover {
-  text-decoration: underline;
-  color: #274e70;
+
+.experience-item {
+  margin-bottom: 40px;
+  padding: 30px;
+  background: #f8fafc;
+  border-radius: 15px;
+  border-left: 5px solid #3b82f6;
+  transition: all 0.3s ease;
 }
-footer {
-  background: #274e70;
-  color: #f5f5f5;
-  text-align: center;
-  padding: 15px;
+
+.experience-item:hover {
+  background: #eff6ff;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.experience-item h3 {
+  color: #1e3a8a;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.experience-item .company {
+  color: #3b82f6;
+  font-weight: 600;
+}
+
+.experience-item .period {
+  display: inline-block;
+  background: #dbeafe;
+  color: #1e40af;
+  padding: 5px 15px;
+  border-radius: 20px;
   font-size: 0.9rem;
-  margin-top: 40px;
+  margin: 10px 0 15px 0;
+  font-weight: 500;
 }
-.skill-box {
-  flex: 1 1 28%;
-  background: #f9fbfc;
-  border: 1px solid #c7d6e5;
-  border-radius: 8px;
-  padding: 15px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+
+.experience-item ul {
+  list-style: none;
+  padding-left: 0;
 }
-.skill-box h4 {
-  color: #274e70;
-  border-bottom: 1px solid #bed1e6;
-  padding-bottom: 5px;
-  margin-top: 0;
+
+.experience-item ul li {
+  padding: 10px 0 10px 30px;
+  position: relative;
+  color: #4a5568;
+  line-height: 1.7;
+}
+
+.experience-item ul li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #10b981;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.project-card {
+  background: linear-gradient(135deg, #ffffff 0%, #f0f9ff 100%);
+  padding: 30px;
+  margin-bottom: 25px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+  border: 1px solid #e0e7ff;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.project-card h3 {
+  color: #1e3a8a;
+  margin-bottom: 15px;
+  font-size: 1.4rem;
+}
+
+.project-card h3 a {
+  color: #1e3a8a;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.project-card h3 a:hover {
+  color: #3b82f6;
+}
+
+.project-card p {
+  color: #4a5568;
+  line-height: 1.8;
+}
+
+.education-list, .cert-list, .achievement-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.education-list li, .cert-list li, .achievement-list li {
+  padding: 15px 20px;
+  margin-bottom: 15px;
+  background: #f8fafc;
+  border-radius: 10px;
+  border-left: 4px solid #3b82f6;
+  font-size: 1.05rem;
+  color: #4a5568;
+}
+
+.cert-list li a, .education-list li a {
+  color: #3b82f6;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.cert-list li a:hover {
+  color: #1e3a8a;
+  text-decoration: underline;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.contact-item {
+  background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.contact-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.contact-item a {
+  color: #1e3a8a;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.05rem;
+}
+
+.contact-item a:hover {
+  color: #3b82f6;
+}
+
+footer {
+  background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+  color: #fff;
+  text-align: center;
+  padding: 30px;
+  font-size: 1rem;
+}
+
+.resume-download {
+  display: inline-block;
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+  color: white;
+  padding: 15px 35px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  margin-top: 20px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
+}
+
+.resume-download:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.6);
+  background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
+}
+
+.badge {
+  display: inline-block;
+  background: #10b981;
+  color: white;
+  padding: 5px 12px;
+  border-radius: 15px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-left: 10px;
+}
+
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2.5rem;
+  }
+  
+  .about-section {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .container {
+    padding: 30px 20px;
+  }
+  
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
 }
 </style>
 </head>
 <body>
 
-<header>
-  <h1>Ann Mary Thomas</h1>
-  <p><em>Data Analysis • Python • Power BI • SQL • Machine Learning</em></p>
-  <p><em>Energy & Sustainability • AI & Forecasting • Data Visualization</em></p>
-</header>
+<div class="wrapper">
+  <header>
+    <h1>Ann Mary Thomas</h1>
+    <p class="tagline">Data Analyst • Sustainability Researcher • AI & Machine Learning Specialist</p>
+    <p class="specialties">Energy Analytics • Deep Learning • Carbon Forecasting • Data Visualization</p>
+  </header>
 
+  <div class="container">
+    <section id="about">
+      <h2>👋 About Me</h2>
+      <div class="about-section">
+        <img src="Profile.jpeg" alt="Ann Mary Thomas" class="about-photo" />
+        <div class="about-text">
+          <p>Hello! I'm <strong>Ann Mary Thomas</strong>, a data analyst and researcher passionate about turning data into actionable strategies for sustainability and innovation. With a foundation in Mechanical Automobile Engineering and a Master's in Data Analytics, I bring a rare combination of technical expertise, research acumen, and real-world problem-solving to every project.</p>
+          <p>Currently, I'm working as an <strong>Energy Consumption and Sustainability Analyst at 3T Additive Manufacturing</strong>, where I'm developing a comprehensive roadmap for energy consumption reduction, cost optimization, and CO₂ emission minimization. My role involves analyzing operational data across their manufacturing processes and suggesting evidence-based policies that drive tangible sustainability improvements while maintaining operational efficiency. This position allows me to directly impact industrial decarbonization efforts through data-driven decision-making.</p>
+          <p>My work bridges the gap between advanced analytics and practical impact. Alongside my industry role, I'm conducting cutting-edge research at London Metropolitan University's Genesis Lab, where I'm developing deep learning-based hybrid models (LSTM + Attention) to forecast electricity demand and CO₂ emissions. This research not only advances academic understanding but also demonstrates the tangible environmental benefits of renewable energy integration—showcasing how AI can accelerate decarbonization strategies.</p>
+          <p>I thrive on building clear, impactful narratives from complex datasets—whether through interactive dashboards, predictive models, or scenario-based analysis. My curiosity drives me to explore emerging techniques in time-series forecasting, deep learning, and renewable energy analytics, always with the aim of making insights accessible and actionable to stakeholders.</p>
+          <p>Beyond the numbers, I enjoy mentoring peers, designing intuitive visualizations, and advocating for data literacy among non-technical audiences. I believe that the most powerful data stories don't just inform—they inspire change and connect communities to a smarter, more sustainable future.</p>
+        </div>
+      </div>
+    </section>
 
-<div class="container">
-  <section>
-  <h2>About Me</h2>
-  <div class="about-section">
-    <img src="Profile.jpeg" alt="Ann Mary Thomas" class="about-photo" />
-    <div class="about-text">
-      <p>Hello! I'm <strong>Ann Mary Thomas</strong>, a data analyst and researcher passionate about turning data into actionable strategies for sustainability and innovation. With a foundation in Mechanical Automobile Engineering and a Master’s in Data Analytics, I bring a rare combination of technical expertise, research acumen, and real-world problem-solving to every project.</p>
-      <p>My work bridges the gap between advanced analytics and practical impact. At the forefront of my journey is cutting-edge research at London Metropolitan University's Genesis Lab, where I’m developing deep learning-based hybrid models (LSTM + Attention) to forecast electricity demand and CO₂ emissions. This research not only advances academic understanding but also demonstrates the tangible environmental benefits of renewable energy integration—showcasing how AI can accelerate decarbonization strategies. My thesis, under journal review, has also given me the opportunity to co-organise a major international conference (FICTA’25).</p>
-      <p>Alongside my research, I’ve gained industry experience across clean-tech and fashion startups. At Navalt Solar and Electric Boats, I developed predictive models to estimate marine CO₂ emissions, built interactive Power BI dashboards, and automated data pipelines to improve operational efficiency. At Archaiesth, I applied data storytelling to customer analytics, enabling better market targeting and higher engagement. These diverse roles reinforced my ability to adapt analytics to varied industries while keeping sustainability and decision-making at the core.</p>
-      <p>I thrive on building clear, impactful narratives from complex datasets—whether through interactive dashboards, predictive models, or scenario-based analysis. My curiosity drives me to explore emerging techniques in time-series forecasting, deep learning, and renewable energy analytics, always with the aim of making insights accessible and actionable to stakeholders.</p>
-      <p>Beyond the numbers, I enjoy mentoring peers, designing intuitive visualizations, and advocating for data literacy among non-technical audiences. I believe that the most powerful data stories don’t just inform—they inspire change and connect communities to a smarter, more sustainable future.</p>
+    <section id="skills">
+      <h2>🚀 Core Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-box">
+          <h4>🌍 Energy & Sustainability</h4>
+          <ul>
+            <li>Electricity Demand Modelling</li>
+            <li>CO₂ Emissions Forecasting</li>
+            <li>Decarbonisation Strategies</li>
+            <li>Renewable Integration Analysis</li>
+            <li>Carbon Intensity Metrics</li>
+          </ul>
+        </div>
+        <div class="skill-box">
+          <h4>🧠 Data Science & AI</h4>
+          <ul>
+            <li>LSTM, RNN, Attention Mechanisms</li>
+            <li>Hybrid Deep Learning Models</li>
+            <li>Predictive Modelling</li>
+            <li>Time-Series Forecasting</li>
+            <li>Scenario-based Analysis</li>
+            <li>Regression & Classification</li>
+          </ul>
+        </div>
+        <div class="skill-box">
+          <h4>🧰 Technical Tools</h4>
+          <ul>
+            <li>Python (Pandas, NumPy, Matplotlib)</li>
+            <li>TensorFlow & scikit-learn</li>
+            <li>Power BI & Excel (Advanced)</li>
+            <li>SQL & Database Management</li>
+            <li>Git & Jupyter Notebook</li>
+          </ul>
+        </div>
+        <div class="skill-box">
+          <h4>🤝 Professional Skills</h4>
+          <ul>
+            <li>Analytical Thinking</li>
+            <li>Data Storytelling</li>
+            <li>Team Collaboration</li>
+            <li>Stakeholder Engagement</li>
+            <li>Research & Documentation</li>
+            <li>Problem Solving</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <h2>💼 Professional Experience</h2>
+
+      <div class="experience-item">
+        <h3>Energy Consumption and Sustainability Analyst <span class="badge">CURRENT</span></h3>
+        <p class="company">3T Additive Manufacturing</p>
+        <span class="period">Sep 2025 – Present</span>
+        <ul>
+          <li>Developing a comprehensive roadmap for energy consumption reduction, cost optimization, and CO₂ emission minimization across manufacturing operations</li>
+          <li>Analyzing operational and energy data from additive manufacturing processes to identify inefficiencies and opportunities for sustainability improvements</li>
+          <li>Designing evidence-based policies and strategies to reduce environmental impact while maintaining operational efficiency and productivity</li>
+          <li>Creating data-driven recommendations for energy management, equipment optimization, and process improvements aligned with decarbonization goals</li>
+          <li>Building analytical frameworks and dashboards to monitor energy consumption patterns, cost metrics, and carbon footprint across production facilities</li>
+          <li>Collaborating with engineering and operations teams to implement sustainability initiatives and measure their impact on cost and emissions</li>
+          <li>Conducting scenario analysis to forecast the financial and environmental benefits of proposed energy reduction strategies</li>
+        </ul>
+      </div>
+
+      <div class="experience-item">
+        <h3>Research Assistant</h3>
+        <p class="company">London Metropolitan University - Genesis Lab</p>
+        <span class="period">Feb 2025 – Present (Part-time)</span>
+        <ul>
+          <li>Spearheaded research project on deep learning-based forecasting of electricity demand and CO₂ emissions, addressing critical sustainability challenges</li>
+          <li>Independently designed and implemented a novel Hybrid AI architecture (LSTM+Attention) in collaboration with Dr. Maitreyee Dey</li>
+          <li>Conducted rigorous scenario-based analysis revealing measurable CO₂ reductions through renewable energy integration</li>
+          <li>Drafted manuscripts currently under review for academic journal publication</li>
+        </ul>
+      </div>
+
+      <div class="experience-item">
+        <h3>Data Analyst Intern</h3>
+        <p class="company">Archaiesth (Fashion Startup)</p>
+        <span class="period">May 2024 – Sep 2024</span>
+        <ul>
+          <li>Analyzed purchasing patterns and customer demographics for a clothing brand to identify key market segments</li>
+          <li>Pinpointed age groups and product lines driving the most engagement and sales through statistical analysis</li>
+          <li>Delivered data-driven recommendations that refined marketing targeting strategies and boosted conversion rates</li>
+          <li>Created visualization dashboards to communicate insights to non-technical stakeholders</li>
+        </ul>
+      </div>
+
+      <div class="experience-item">
+        <h3>Junior Data Analyst</h3>
+        <p class="company">Navalt Solar and Electric Boats</p>
+        <span class="period">Aug 2022 – Jan 2024</span>
+        <ul>
+          <li>Led the analysis of operational data for over 600 ships from Mediterranean Shipping Company (MSC), processing 100,000+ records</li>
+          <li>Developed Python-based automation scripts to clean and process Excel data, reducing data preparation time by 75% and improving accuracy</li>
+          <li>Built predictive models to evaluate fuel efficiency and estimate CO₂ emissions using sea state and engine performance variables</li>
+          <li>Collaborated with engineering and sustainability teams to enhance workflow efficiency and align insights with decarbonisation goals</li>
+          <li>Independently researched Carbon Intensity Indicator (CII) metrics using IMO guidelines, expanding domain knowledge in maritime sustainability</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>📊 Featured Projects</h2>
+      
+      <div class="project-card">
+        <h3><a href="https://github.com/Ann-Mary-Thomas/energy-forecasting-usa" target="_blank">Energy Forecasting with Deep Learning 🔗</a></h3>
+        <p>
+          Researched and implemented LSTM, RNN, and RBM+NN deep-learning models to forecast electricity demand and CO₂ emissions in the U.S. power sector. Collected hourly demand and emission data for California and Texas, engineering time-based, weather, and lag features. Conducted model comparison on MAE and RMSE metrics, achieving best results with an optimized LSTM (approximately 5% better than RNN). Results are being prepared for academic publication—highlighting peak-demand forecasting improvements and decarbonization implications.
+        </p>
+      </div>
+      
+      <div class="project-card">
+        <h3><a href="https://github.com/ann-1999-byte/vehicle-emissions-dashboard" target="_blank">Vehicle Emissions Dashboard 🔗</a></h3>
+        <p>
+          Developed a comprehensive Power BI dashboard analyzing CO₂ emissions across vehicle types. Integrated engine capacity, vehicle mass, and fuel-type data from the EU environmental dataset. Used scatter and bar charts to highlight top emitters, and implemented interactive filters for comparing different manufacturers, countries, and fuel types. Demonstrated that engine size drove approximately 70% of emission variance—providing clear visual insights to guide eco-strategy decisions.
+        </p>
+      </div>
+      
+      <div class="project-card">
+        <h3><a href="https://github.com/ann-1999-byte/marketing-campaign-analysis" target="_blank">Marketing Campaign Analysis 🔗</a></h3>
+        <p>
+          Built a logistic regression model in Python to predict customer affinity towards promotional offers. Cleaned and preprocessed demographic and purchase history data from approximately 1,500 customers. Identified key features—such as age group, previous purchase volume, and product ownership—that increased campaign response by 20%. Created performance reports including accuracy metrics, confusion matrix, and ROC curve with actionable recommendations that improved campaign targeting.
+        </p>
+      </div>
+
+      <div class="project-card">
+        <h3><a href="https://github.com/ann-1999-byte/graduate-outcomes-analysis" target="_blank">Graduate Outcomes in Education 🔗</a></h3>
+        <p>
+          Conducted comprehensive analysis of UK higher education outcomes using HESA data. Applied Random Forest and K-means clustering to explore how variables such as subject, provider type, and study mode influence employment or further study. Achieved approximately 45% classification accuracy across six outcome categories, with notable trends showing higher employment rates in STEM fields. Cluster analysis unveiled four distinct graduate profiles, used to recommend targeted university support programs.
+        </p>
+      </div>
+    </section>
+
+    <section id="education">
+      <h2>🎓 Education</h2>
+      <ul class="education-list">
+        <li><strong>MSc in Data Analytics</strong> — London Metropolitan University (2024 – 2025)</li>
+        <li><strong>B.Tech in Mechanical Automobile Engineering</strong> — SCT College of Engineering (2017 – 2021)</li>
+      </ul>
+    </section>
+
+    <section id="certifications">
+      <h2>📜 Certifications</h2>
+      <ul class="cert-list">
+        <li>
+          <a href="Simplilearn_Excel.pdf" target="_blank">
+            📊 Excel for Data Analytics — Simplilearn
+          </a>
+        </li>
+        <li>
+          <a href="Simplilearn_Statistics.pdf" target="_blank">
+            📈 Statistics for Data Science — Simplilearn
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <section id="achievements">
+      <h2>🏆 Key Achievements</h2>
+      <ul class="achievement-list">
+        <li>Research on energy demand and decarbonisation selected for publication under Genesis Lab</li>
+        <li>Independently designed LSTM+Attention hybrid model architecture for critical infrastructure forecasting</li>
+        <li>Student Volunteer - Frontiers of Intelligent Computing: Theory and Applications (FICTA'25) international conference</li>
+        <li>Reduced data processing time by 75% through Python automation at Navalt Solar and Electric Boats</li>
+      </ul>
+    </section>
+
+    <section id="resume">
+      <h2>📄 Resume</h2>
+      <p>
+        <a href="resume.pdf" target="_blank" class="resume-download">Download My Resume (PDF)</a>
+      </p>
+    </section>
+
+    <section id="contact">
+      <h2>📬 Let's Connect</h2>
+      <div class="contact-grid">
+        <div class="contact-item">
+          <p>📧 <strong>Email</strong></p>
+          <a href="mailto:annmarytttt@gmail.com">annmarytttt@gmail.com</a>
+        </div>
+        <div class="contact-item">
+          <p>💼 <strong>LinkedIn</strong></p>
+          <a href="https://www.linkedin.com/in/ann-mary-thomas-6272aa200" target="_blank">Ann Mary Thomas</a>
+        </div>
+        <div class="contact-item">
+          <p>🐙 <strong>GitHub</strong></p>
+          <a href="https://github.com/Ann-Mary-Thomas" target="_blank">Ann-Mary-Thomas</a>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    &copy; 2025 Ann Mary Thomas — All rights reserved.
+  </footer>
 </div>
-  </div>
-</section>
-
- <div class="skills-grid">
-  <div class="skill-box">
-    <h4>🌍 Energy & Sustainability Analytics</h4>
-    <ul>
-      <li>Electricity Demand Modelling</li>
-      <li>CO₂ Emissions Forecasting</li>
-      <li>Decarbonisation Strategies</li>
-      <li>Renewable Integration Analysis</li>
-    </ul>
-  </div>
-  <div class="skill-box">
-    <h4>🧠 Data Science & AI Techniques</h4>
-    <ul>
-      <li>LSTM, RNN, Hybrid LSTM+Attention, RBM+MLP</li>
-      <li>Predictive Modelling</li>
-      <li>Time-Series Forecasting</li>
-      <li>Scenario-based Forecasting</li>
-      <li>Regression Analysis</li>
-    </ul>
-  </div>
-  <div class="skills-grid">
-  <div class="skill-box">
-    <h4>🧰 Tools</h4>
-    <ul>
-      <li>Python (Pandas, NumPy, Matplotlib, scikit-learn, TensorFlow)</li>
-      <li>Power BI</li>
-      <li>Excel (Advanced)</li>
-      <li>SQL</li>
-      <li>Git, Jupyter Notebook</li>
-    </ul>
-  </div>
-  <div class="skill-box">
-    <h4>🤝 Soft Skills</h4>
-    <ul>
-      <li>Analytical Thinking</li>
-      <li>Data Storytelling</li>
-      <li>Team Collaboration</li>
-      <li>Stakeholder Engagement</li>
-      <li>Problem Solving</li>
-    </ul>
-  </div>
-</div>
-
-  <h2>💼 Experience</h2>
-
-  <h3>
-    Research Assistant – 
-    <a href="https://www.londonmet.ac.uk" target="_blank">Genesis Lab, London Metropolitan University</a><br>
-    <small>Feb 2025 – present</small>
-  </h3>
-  <ul>
-    <li>Spearheaded a research project on deep learning-based forecasting of electricity demand and CO₂ emissions, addressing critical sustainability and decarbonisation challenges.</li>
-    <li>Independently designed and implemented a novel Hybrid AI architecture (LSTM+Attention) in collaboration with Dr. Maitreyee Dey, significantly enhancing both forecast accuracy and interpretability over baseline models.</li>
-    <li>Conducted rigorous scenario-based analysis simulating renewable energy penetration (solar contributions of 10%–50%) to quantify its environmental impact, revealing measurable CO₂ reductions.</li>
-    <li>Performed regional benchmarking across California and Texas, demonstrating the superior performance of attention-based recurrent networks compared to RNN, RBM+MLP, and conventional frameworks.</li>
-    <li>Translated complex findings into actionable insights and drafted a manuscript currently under review for academic journal publication.</li>
-    <li>Contributed to knowledge dissemination by co-organising the Frontiers of Intelligent Computing: Theory and Applications (FICTA’25) conference.</li>
-  </ul>
-
-
-  <h3>
-    Data Analyst Intern – 
-    <a href="https://archaiesth.com" target="_blank">Archaiesth (fashion startup)</a><br>
-    <small>May 2024 – Sep 2024</small>
-  </h3>
-  <ul>
-    <li>Analyzed purchasing patterns and demographics for a clothing brand</li>
-    <li>Pinpointed age groups and product lines driving the most engagement and sales</li>
-    <li>Delivered data‑driven recommendations that refined marketing targeting and boosted conversions</li>
-  </ul>
-
- <h3>
-  Junior Data Analyst – 
-  <a href="https://navaltboats.com" target="_blank">Navalt Solar and Electric Boats</a><br>
-  <small>Aug 2022 – Jan 2024</small>
-</h3>
-<ul>
-  <li>Led the analysis of operational data for over 600 ships from the Mediterranean Shipping Company (MSC), comprising more than 100,000 records.</li>
-  <li>Developed Python-based automation scripts to clean and process Excel data, reducing data preparation time by 75% and significantly improving accuracy.</li>
-  <li>Built models to evaluate fuel efficiency and estimate CO₂ emissions using variables such as sea state and engine performance.</li>
-  <li>Collaborated closely with engineering and sustainability teams to enhance workflow efficiency and align insights with decarbonisation goals.</li>
-  <li>Independently conducted research on Carbon Intensity Indicator (CII) metrics using International Maritime Organization (IMO) guidelines, expanding domain knowledge in maritime sustainability.</li>
-</ul>
-</section>
-
- <section>
-  <h2>📊 Projects</h2>
-  <div class="project">
-    <h3><a href="https://github.com/ann-1999-byte/vehicle-emissions-dashboard" target="_blank">Vehicle Emissions Dashboard</a></h3>
-    <p>
-      Developed a Power BI dashboard analyzing CO₂ emissions across vehicle types.  
-      Integrated engine capacity, vehicle mass, and fuel-type data from the EU environmental dataset.  
-      Used scatter and bar charts to highlight top emitters, and implemented interactive filters so users can compare different manufacturers, countries, and fuel types.  
-      Helped demonstrate that engine size drove ~70% of emission variance—providing clear visual insights to guide eco-strategy decisions.
-    </p>
-  </div>
-  
-  <div class="project">
-    <h3><a href="https://github.com/ann-1999-byte/marketing-campaign-analysis" target="_blank">Marketing Campaign Analysis</a></h3>
-    <p>
-      Built a logistic regression model in Python to predict customer affinity towards promotional offers.  
-      Cleaned and preprocessed demographic and purchase history data from ~1,500 customers.  
-      Identified key features—such as age group, previous purchase volume, and product ownership—that increased campaign response by 20%.  
-      Created performance reports (accuracy, confusion matrix, ROC curve) and shared actionable recommendations that improved campaign targeting.
-    </p>
-  </div>
-
-  <div class="project">
-    <h3><a href="https://github.com/ann-1999-byte/graduate-outcomes-analysis" target="_blank">Graduate Outcomes in Education</a></h3>
-    <p>
-      Conducted an analysis of UK higher education outcomes using HESA data.  
-      Used Random Forest and K-means clustering to explore how variables such as subject, provider type, and study mode influence employment or further study.  
-      Achieved ~45% classification accuracy across six outcome categories, with notable trends showing higher employment rates in STEM fields.  
-      Cluster analysis unveiled four distinct graduate profiles, used to recommend targeted university support programs.
-    </p>
-  </div>
-
-  <div class="project">
-    <h3><a href="https://github.com/Ann-Mary-Thomas/energy-forecasting-usa" target="_blank">Energy Forecasting (Deep Learning)</a></h3>
-    <p>
-      Researched and implemented LSTM, RNN, and RBM+NN deep-learning models to forecast electricity demand and CO₂ emissions in the U.S. power sector.  
-      Collected hourly demand and emission data for California and Texas; engineered time-based, weather, and lag features.  
-      Conducted model comparison on MAE and RMSE metrics, achieving best results with an optimized LSTM (~5% better than RNN).  
-      Results are being prepared for academic publication—highlighting peak-demand forecasting improvements and decarbonization implications.
-    </p>
-  </div>
-</section>
-
-  <section>
-    <h2>🎓Education</h2>
-    <ul>
-      <li><strong>MSc in Data Analytics</strong>, London Metropolitan University (2024 – 2025)</li>
-      <li><strong>B‑Tech in Mechanical Automobile Engineering</strong>, SCT College of Engineering (2017 – 2021)</li>
-    </ul>
-  </section>
-
-<section id="certifications">
-  <h2>🎓 Certifications</h2>
-  <ul>
-    <li>
-      <a href="Simplilearn_Excel.pdf" target="_blank">
-        📊 Simplilearn Certificate – Excel for Data Analytics
-      </a>
-    </li>
-    <li>
-      <a href="Simplilearn_Statistics.pdf" target="_blank">
-        📈 Simplilearn Certificate – Statistics for Data Science
-      </a>
-    </li>
-  
-  </ul>
-</section>
-<section id="achievements">
-  <h2>🏆 Achievements</h2>
-  <ul>
-    <li>Research on energy demand & decarbonisation selected for publication under Genesis Lab.</li>
-    <li>Independently designed LSTM+Attention hybrid model architecture for critical infrastructure forecasting.</li>
-    <li>Co-organised Frontiers of Intelligent Computing: Theory and Applications (FICTA’25)</li>
-  </ul>
-</section>
-<section id="resume">
-  <h2>📄 Resume</h2>
-  <p>You can <a href="resume.pdf" target="_blank">open the resume in a new tab</a>.</p
-</section>
-
-
-<!-- <section>
-<h2>📄 Portfolio</h2>
-<p> 
- Want a copy of this portfolio in PDF format?<br>
-<a href="Ann_Mary_Thomas_Data_Analyst_Portfolio.pdf" target="_blank">Download My Portfolio (PDF)</a> 
-</p> 
-</section>  -->
-
-<section id="contact">
-  <h2>📬 Contact</h2>
-  <p>📧 Email: <a href="mailto:annmarytttt@gmail.com">annmarytttt@gmail.com</a></p>
-  <p>💼 LinkedIn: <a href="https://www.linkedin.com/in/ann-mary-thomas-6272aa200" target="_blank">Ann Mary Thomas</a></p>
-  <p>🐙 GitHub: <a href="https://github.com/Ann-Mary-Thomas" target="_blank">Ann-Mary-Thomas</a></p>
-</section>
-
-</div>
-
-<footer>&copy; 2025 Ann Mary Thomas — All rights reserved.</footer>
 
 </body>
 </html>
-
-  
-

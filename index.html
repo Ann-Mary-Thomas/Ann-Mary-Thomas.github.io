@@ -14,7 +14,7 @@
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.7;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #2d5016 0%, #52a447 100%);
   color: #2d3748;
   min-height: 100vh;
   padding: 20px;
@@ -30,7 +30,7 @@ body {
 }
 
 header {
-  background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+  background: linear-gradient(135deg, #1e5631 0%, #2d7a3e 100%);
   color: #fff;
   padding: 60px 40px;
   text-align: center;
@@ -92,11 +92,11 @@ section:last-child {
 }
 
 h2 {
-  color: #1e3a8a;
+  color: #1e5631;
   font-size: 2.2rem;
   margin-bottom: 30px;
   padding-bottom: 15px;
-  border-bottom: 3px solid #3b82f6;
+  border-bottom: 3px solid #52a447;
   display: inline-block;
   font-weight: 600;
 }
@@ -112,11 +112,16 @@ h2 {
   flex: 0 0 200px;
   width: 200px;
   height: 200px;
-  border-radius: 15px; 
+  border-radius: 50%;
   object-fit: cover;
   box-shadow: 0 8px 20px rgba(0,0,0,0.15);
   border: 5px solid #f0f4ff;
-
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  -webkit-backface-visibility: hidden;
+  -ms-transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
 }
 
 .about-text p {
@@ -134,7 +139,7 @@ h2 {
 }
 
 .skill-box {
-  background: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 100%);
+  background: linear-gradient(135deg, #f8fafc 0%, #e8f5e9 100%);
   border: none;
   border-radius: 15px;
   padding: 25px;
@@ -148,11 +153,11 @@ h2 {
 }
 
 .skill-box h4 {
-  color: #1e3a8a;
+  color: #1e5631;
   font-size: 1.2rem;
   margin-bottom: 15px;
   padding-bottom: 10px;
-  border-bottom: 2px solid #3b82f6;
+  border-bottom: 2px solid #52a447;
 }
 
 .skill-box ul {
@@ -172,7 +177,7 @@ h2 {
   content: "▸";
   position: absolute;
   left: 0;
-  color: #3b82f6;
+  color: #52a447;
   font-weight: bold;
 }
 
@@ -181,30 +186,30 @@ h2 {
   padding: 30px;
   background: #f8fafc;
   border-radius: 15px;
-  border-left: 5px solid #3b82f6;
+  border-left: 5px solid #52a447;
   transition: all 0.3s ease;
 }
 
 .experience-item:hover {
-  background: #eff6ff;
+  background: #f1f8f4;
   box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
 .experience-item h3 {
-  color: #1e3a8a;
+  color: #1e5631;
   font-size: 1.5rem;
   margin-bottom: 10px;
 }
 
 .experience-item .company {
-  color: #3b82f6;
+  color: #2d7a3e;
   font-weight: 600;
 }
 
 .experience-item .period {
   display: inline-block;
-  background: #dbeafe;
-  color: #1e40af;
+  background: #c8e6c9;
+  color: #1b5e20;
   padding: 5px 15px;
   border-radius: 20px;
   font-size: 0.9rem;
@@ -234,13 +239,13 @@ h2 {
 }
 
 .project-card {
-  background: linear-gradient(135deg, #ffffff 0%, #f0f9ff 100%);
+  background: linear-gradient(135deg, #ffffff 0%, #f1f8f4 100%);
   padding: 30px;
   margin-bottom: 25px;
   border-radius: 15px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.08);
   transition: all 0.3s ease;
-  border: 1px solid #e0e7ff;
+  border: 1px solid #c8e6c9;
 }
 
 .project-card:hover {
@@ -249,19 +254,19 @@ h2 {
 }
 
 .project-card h3 {
-  color: #1e3a8a;
+  color: #1e5631;
   margin-bottom: 15px;
   font-size: 1.4rem;
 }
 
 .project-card h3 a {
-  color: #1e3a8a;
+  color: #1e5631;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .project-card h3 a:hover {
-  color: #3b82f6;
+  color: #52a447;
 }
 
 .project-card p {
@@ -279,20 +284,20 @@ h2 {
   margin-bottom: 15px;
   background: #f8fafc;
   border-radius: 10px;
-  border-left: 4px solid #3b82f6;
+  border-left: 4px solid #52a447;
   font-size: 1.05rem;
   color: #4a5568;
 }
 
 .cert-list li a, .education-list li a {
-  color: #3b82f6;
+  color: #2d7a3e;
   text-decoration: none;
   font-weight: 600;
   transition: color 0.3s ease;
 }
 
 .cert-list li a:hover {
-  color: #1e3a8a;
+  color: #1e5631;
   text-decoration: underline;
 }
 
@@ -304,7 +309,7 @@ h2 {
 }
 
 .contact-item {
-  background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+  background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
   padding: 20px;
   border-radius: 12px;
   text-align: center;
@@ -317,18 +322,18 @@ h2 {
 }
 
 .contact-item a {
-  color: #1e3a8a;
+  color: #1e5631;
   text-decoration: none;
   font-weight: 600;
   font-size: 1.05rem;
 }
 
 .contact-item a:hover {
-  color: #3b82f6;
+  color: #52a447;
 }
 
 footer {
-  background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+  background: linear-gradient(135deg, #1e5631 0%, #2d7a3e 100%);
   color: #fff;
   text-align: center;
   padding: 30px;
@@ -337,7 +342,7 @@ footer {
 
 .resume-download {
   display: inline-block;
-  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+  background: linear-gradient(135deg, #52a447 0%, #2d7a3e 100%);
   color: white;
   padding: 15px 35px;
   border-radius: 30px;
@@ -345,13 +350,13 @@ footer {
   font-weight: 600;
   margin-top: 20px;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
+  box-shadow: 0 4px 15px rgba(82, 164, 71, 0.4);
 }
 
 .resume-download:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.6);
-  background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
+  box-shadow: 0 6px 20px rgba(82, 164, 71, 0.6);
+  background: linear-gradient(135deg, #2d7a3e 0%, #1e5631 100%);
 }
 
 .badge {
@@ -464,7 +469,7 @@ footer {
       <div class="experience-item">
         <h3>Energy Consumption and Sustainability Analyst <span class="badge">CURRENT</span></h3>
         <p class="company">3T Additive Manufacturing</p>
-        <span class="period">Sep 2025 – Present</span>
+        <span class="period">Feb 2025 – Present</span>
         <ul>
           <li>Developing a comprehensive roadmap for energy consumption reduction, cost optimization, and CO₂ emission minimization across manufacturing operations</li>
           <li>Analyzing operational and energy data from additive manufacturing processes to identify inefficiencies and opportunities for sustainability improvements</li>
@@ -479,7 +484,7 @@ footer {
       <div class="experience-item">
         <h3>Research Assistant</h3>
         <p class="company">London Metropolitan University - Genesis Lab</p>
-        <span class="period">Feb 2025 – Present (Part-time)</span>
+        <span class="period">Feb 2025 – Present</span>
         <ul>
           <li>Spearheaded research project on deep learning-based forecasting of electricity demand and CO₂ emissions, addressing critical sustainability challenges</li>
           <li>Independently designed and implemented a novel Hybrid AI architecture (LSTM+Attention) in collaboration with Dr. Maitreyee Dey</li>
@@ -575,7 +580,7 @@ footer {
       <ul class="achievement-list">
         <li>Research on energy demand and decarbonisation selected for publication under Genesis Lab</li>
         <li>Independently designed LSTM+Attention hybrid model architecture for critical infrastructure forecasting</li>
-        <li>Student Volunteer - Frontiers of Intelligent Computing: Theory and Applications (FICTA'25) international conference</li>
+        <li>Student Volunteer for Frontiers of Intelligent Computing: Theory and Applications (FICTA'25) international conference</li>
         <li>Reduced data processing time by 75% through Python automation at Navalt Solar and Electric Boats</li>
       </ul>
     </section>

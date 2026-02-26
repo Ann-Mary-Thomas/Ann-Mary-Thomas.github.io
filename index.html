@@ -29,8 +29,9 @@ body {
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
 }
 
+/* ===== OPTION A: Deep Forest Green ===== */
 header {
-  background: #7a9184;
+  background: linear-gradient(135deg, #1b4332 0%, #2d6a4f 50%, #40916c 100%);
   color: #fff;
   padding: 60px 40px;
   text-align: center;
@@ -45,8 +46,18 @@ header::before {
   right: -50%;
   width: 200%;
   height: 200%;
-  background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(255,255,255,0.08) 0%, transparent 70%);
   animation: pulse 15s ease-in-out infinite;
+}
+
+header::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #74c69d, #b7e4c7, #74c69d);
 }
 
 @keyframes pulse {
@@ -60,7 +71,7 @@ header h1 {
   font-weight: 700;
   position: relative;
   z-index: 2;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
 }
 
 header .tagline {
@@ -116,12 +127,6 @@ h2 {
   object-fit: cover;
   box-shadow: 0 8px 20px rgba(0,0,0,0.15);
   border: 5px solid #f0f4ff;
-  image-rendering: -webkit-optimize-contrast;
-  image-rendering: crisp-edges;
-  -webkit-backface-visibility: hidden;
-  -ms-transform: translateZ(0);
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
 }
 
 .about-text p {
@@ -344,8 +349,8 @@ h2 {
 }
 
 footer {
-  background: #7a9184;
-  color: #fff;
+  background: linear-gradient(135deg, #1b4332 0%, #2d6a4f 100%);
+  color: #d8f3dc;
   text-align: center;
   padding: 30px;
   font-size: 1rem;
